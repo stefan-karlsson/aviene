@@ -25,7 +25,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           cache: 'pnpm'
-          node-version-file: pnpm-workspace.yaml
+          node-version-file: package.json
 
       - name: Install and Build
         run: |
@@ -35,6 +35,10 @@ jobs:
         run: |
           pnpm dlx log4brains build --out .adr --basePath /${GITHUB_REPOSITORY#*/}/adr
       
+      - name: Debug directory contents
+        run: |
+          ls -la .
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
