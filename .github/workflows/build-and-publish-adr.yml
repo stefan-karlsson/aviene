@@ -28,7 +28,7 @@ jobs:
 
       - name: Install and Build
         run: |
-          pnpm ci --dev --frozen-lockfile
+          pnpm ci
 
       - name: Build Architecture Decision Records
         run: |
