@@ -6,12 +6,13 @@ jobs:
   commitlint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: pnpm/action-setup@v4
-        name: Install pnpm  
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
         with:
           run_install: false
 
@@ -21,7 +22,7 @@ jobs:
           cache: 'pnpm'
           node-version-file: package.json
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
           pnpm install --frozen-lockfile --dev
 
