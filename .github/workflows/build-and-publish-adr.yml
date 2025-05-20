@@ -25,6 +25,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           cache: 'pnpm'
+          node-version-file: pnpm-workspace.yaml
 
       - name: Install and Build
         run: |
