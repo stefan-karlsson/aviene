@@ -1,0 +1,8 @@
+project:
+  name: aviene
+  tz: Europe/Stockholm
+  adrFolder: ./docs/adr
+  packages:
+    - name: tenant-management
+      path: ./services/tenant-management
+      adrFolder: ./services/tenant-management/docs/adr

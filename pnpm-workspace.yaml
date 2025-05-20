@@ -1,0 +1,14 @@
+packages:
+  - services/*
+
+# Global catalog
+catalog:
+  typescript: ">=5.7"
+
+nodeVersion: 24.0.2 
+engineStrict: true
+strictPeerDependencies: true
+packageManagerStrictVersion: true
+savePrefix: ""
+
+nodeOptions: "--no-warnings=ExperimentalWarning"

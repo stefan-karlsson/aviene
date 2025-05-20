@@ -1,0 +1,33 @@
+{
+  "name": "aviene",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A modern SaaS architecture playground - exploring infrastructure, services, and applications through practical implementation.",
+  "keywords": [
+    "saas",
+    "modern",
+    "architecture",
+    "playground",
+    "infrastructure",
+    "services",
+    "applications"
+  ],
+  "author": {
+    "name": "Stefan Karlsson",
+    "email": "iam@stefan-karlsson.se",
+    "url": "https://github.com/stefan-karlsson"
+  },
+  "license": "LGPL-3.0-or-later",
+  "packageManager": "pnpm@10.9.0",
+  "engines": {
+    "node": ">=24.0.2"
+  },
+  "scripts": {
+    "adr:new": "log4brains adr new"
+  },
+  "type": "module",
+  "devDependencies": {
+    "log4brains": "^1.1.0",
+    "typescript": "catalog:"
+  }
+}
