@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     globalExtends: ["config:recommended"], // using this instead of "extends" solves the problem with order of the configuration
     repositories: ['stefan-karlsson/aviene'],
     baseBranches: ["main"],
