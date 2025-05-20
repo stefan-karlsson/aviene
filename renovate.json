@@ -1,31 +1,3 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["config:recommended"],
-    "repositories": ["stefan-karlsson/aviene"],
-    "baseBranches": ["main"],
-    "commitBody": "Signed-off-by: {{{gitAuthor}}}",
-    "dependencyDashboard": true,
-    "allowedPostUpgradeCommands": ["^pnpm install"],
-    "packageRules": [
-        {
-            "groupName": "all non-major dependencies",
-            "groupSlug": "all-minor-patch", 
-            "matchPackageNames": ["*"],
-            "matchUpdateTypes": ["minor", "patch"],
-            "postUpgradeTasks": {
-                "commands": ["pnpm install"],
-                "fileFilters": ["**/**"],
-                "executionMode": "branch"
-            }
-        },
-        {
-            "matchUpdateTypes": ["major"],
-            "dependencyDashboardApproval": true
-        }
-    ],
-    "printConfig": true,
-    "labels": ["dependencies"],
-    "dependencyDashboardLabels": ["dependencies"],
-    "commitMessagePrefix": "chore: ",
-    "prHourlyLimit": 0
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json"
 }
