@@ -1,4 +1,4 @@
-name: Publish Architecture Decision Records
+name: Build and Publish ADRs
 
 on:
   push:
@@ -12,20 +12,30 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     steps:
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          run_install: false
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # required by Log4brains to work correctly (needs the whole Git history)
-      
-      - uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-      
+
+      - name: Install and Build
+        run: |
+          pnpm ci --dev --frozen-lockfile
+
       - name: Build Architecture Decision Records
         run: |
-          npx log4brains build --basePath /${GITHUB_REPOSITORY#*/}/adr
+          pnpm dlx log4brains build --out .adr --basePath /${GITHUB_REPOSITORY#*/}/adr
       
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: .log4brains/out
+          folder: .adr/out
           target-folder: adr
