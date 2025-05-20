@@ -21,16 +21,16 @@ jobs:
           cache: 'pnpm'
           node-version-file: package.json
 
+      - name: Install Dependencies
+        run: |
+          pnpm install --frozen-lockfile --dev
+
       - name: Print versions
         run: |
           git --version
           node --version
           pnpm --version
           pnpm exec commitlint --version
-
-      - name: Install Dependencies
-        run: |
-          pnpm install --frozen-lockfile --dev
 
       - name: Validate current commit (last commit) with commitlint
         if: github.event_name == 'push'
