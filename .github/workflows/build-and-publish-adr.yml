@@ -37,7 +37,7 @@ jobs:
       
       - name: Debug directory contents
         run: |
-          ls -la .
+          ls -la .adr
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
