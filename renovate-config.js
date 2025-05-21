@@ -1,32 +1,84 @@
 export default {
-    globalExtends: ["config:recommended"], // using this instead of "extends" solves the problem with order of the configuration
-    repositories: ['stefan-karlsson/aviene'],
-    baseBranches: ["main"],
-    commitBody: "Signed-off-by: {{{gitAuthor}}}",
-    dependencyDashboard: true,
-    allowedPostUpgradeCommands: ['^pnpm install'],
+    timezone: "Europe/Stockholm",
+    baseBranches: ["develop"],
+    
+    onboarding: true,
+    onboardingConfig: {
+        extends: ["config:recommended"]
+    },
+    
+    requireConfig: "required",
+
+    extends: [
+        "config:recommended",
+        ":dependencyDashboard",
+        ":semanticCommits", 
+        ":semanticPrefixFixDepsChoreOthers",
+        ":automergeAll",
+        ":automergeLinters",
+        ":automergeTesters",
+        ":automergeTypes",
+        ":maintainLockFilesWeekly"
+    ],
+
+    prHourlyLimit: 0,
+    prConcurrentLimit: 0,
+    
+    labels: ["dependencies"],
+    
+    schedule: ["before 3am on monday"],
+    updateNotScheduled: false,
+    
+    stabilityDays: 3,
+
+    prBodyColumns: ["Package", "Change", "Age", "Adoption", "Passing", "Confidence"],
+    prBodyDefinitions: {
+        Age: "{{#if age}}Age: {{age}}{{/if}}",
+        Adoption: "{{#if adoption}}Adoption: {{adoption}}{{/if}}",
+        Change: "{{#if change}}Change: {{change}}{{/if}}",
+        Confidence: "{{#if confidence}}Confidence: {{confidence}}{{/if}}",
+        Package: "{{#if packageName}}Package: {{packageName}}{{/if}}",
+        Passing: "{{#if passing}}Passing: {{passing}}{{/if}}"
+    },
+
+    dependencyDashboardLabels: ["dependencies"],
+
     packageRules: [
         {
-            // Group all non-major dependencies together
-            "groupName": "all non-major dependencies",
-            "groupSlug": "all-minor-patch",
-            "matchPackageNames": ["*"],
-            "matchUpdateTypes": ["minor", "patch"],
-            "postUpgradeTasks": {
-                "commands": ["pnpm install"],
-                "fileFilters": ["**/**"],
-                "executionMode": "branch"
-            }
+            groupName: "Patch & Minor Updates",
+            groupSlug: "all-minor-patch-updates",
+            matchUpdateTypes: ["minor", "patch"],
+            prCreation: "immediate",
+            prPriority: 4,
+            minimumReleaseAge: "3 days",
+            matchPackageNames: ["*"],
         },
         {
-            // Require dashboard approval for major updates
-            "matchUpdateTypes": ["major"],
-            "dependencyDashboardApproval": true,
+            matchPaths: ["packages/**"],
+            extends: ["config:js-lib"]
+        },
+        {
+            matchPaths: ["apps/**", "services/**"],
+            extends: ["config:js-app"] 
         }
     ],
-    printConfig: true,
-    labels: ['dependencies'],
-    dependencyDashboardLabels: ['dependencies'],
-    commitMessagePrefix: 'chore: ',
-    prHourlyLimit: 0 // removes rate limit for PR creation per hour
+
+    major: {
+        automerge: false,
+        prCreation: "immediate",
+        minimumReleaseAge: "3 days",
+        dependencyDashboardApproval: true,
+    },
+
+    vulnerabilityAlerts: {
+        enabled: true,
+        labels: ["security"],
+    },
+
+    allowedCommands: ["^pnpm install"],
+    postUpgradeTasks: {
+        commands: ["pnpm install"],
+        fileFilters: ["pnpm-lock.yaml", "**/*.js"],
+        executionMode: "update",
+    }
 };
