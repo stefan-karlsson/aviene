@@ -8,6 +8,7 @@
       "tags": {
         "type:service": {
           "dependencies": {
+            // Services should be independently deployable and not depend on other services
             "deny": ["type:service"]
           }
         }

@@ -1,3 +1,4 @@
 {
+    "extends": ["//"],
     "tags": ["type:service"]
 }
