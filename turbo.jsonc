@@ -1,22 +1,23 @@
 {
     "$schema": "https://turborepo.com/schema.json",
     "tasks": {
-      "lint": {
-      }
+      "lint": {}
     },
     "boundaries": {
       "tags": {
         "type:service": {
           "dependencies": {
-            // Services should be independently deployable and not depend on other services
+            /* 
+             * Services are not allowed to depend on other services.
+             */
             "deny": ["type:service"]
           }
         }
       }
     },
+
     "remoteCache": {
       "enabled": true,
-      // Signs cache artifacts with HMAC-SHA256 using environment variable TURBO_REMOTE_CACHE_SIGNATURE_KEY
       "signature": true
     }
   }
