@@ -20,24 +20,6 @@ importers:
       '@commitlint/config-conventional':
         specifier: 19.8.1
         version: 19.8.1
-      '@eslint/css':
-        specifier: 0.8.1
-        version: 0.8.1
-      '@eslint/js':
-        specifier: 9.27.0
-        version: 9.27.0
-      '@eslint/json':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@eslint/markdown':
-        specifier: 6.4.0
-        version: 6.4.0
-      eslint:
-        specifier: 9.27.0
-        version: 9.27.0(jiti@2.4.2)
-      globals:
-        specifier: 16.1.0
-        version: 16.1.0
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -56,11 +38,30 @@ importers:
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
+
+  packages/workspace/eslint-config:
+    devDependencies:
+      '@eslint/css':
+        specifier: 0.8.1
+        version: 0.8.1
+      '@eslint/js':
+        specifier: 9.27.0
+        version: 9.27.0
+      '@eslint/json':
+        specifier: 0.12.0
+        version: 0.12.0
+      '@eslint/markdown':
+        specifier: 6.4.0
+        version: 6.4.0
+      eslint:
+        specifier: 9.27.0
+        version: 9.27.0(jiti@2.4.2)
+      globals:
+        specifier: 16.1.0
+        version: 16.1.0
       typescript-eslint:
         specifier: 8.32.1
         version: 8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
-
-  packages/workspace/eslint-config: {}
 
   services/tenant-management:
     devDependencies:

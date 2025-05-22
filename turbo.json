@@ -3,5 +3,14 @@
     "tasks": {
       "lint": {
       }
+    },
+    "boundaries": {
+      "tags": {
+        "type:service": {
+          "dependencies": {
+            "deny": ["type:service"]
+          }
+        }
+      }
     }
   }

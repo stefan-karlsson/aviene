@@ -26,24 +26,18 @@
         "adr:new": "log4brains adr new",
         "lint": "turbo lint",
         "lint:fix": "turbo lint:fix",
+        "check:boundaries": "turbo boundaries",
         "prepare": "husky"
     },
     "type": "module",
     "devDependencies": {
         "@commitlint/cli": "19.8.1",
         "@commitlint/config-conventional": "19.8.1",
-        "@eslint/css": "0.8.1",
-        "@eslint/js": "9.27.0",
-        "@eslint/json": "0.12.0",
-        "@eslint/markdown": "6.4.0",
-        "eslint": "9.27.0",
-        "globals": "16.1.0",
         "husky": "9.1.7",
         "lint-staged": "16.0.0",
         "log4brains": "^1.1.0",
         "prettier": "3.5.3",
         "turbo": "2.5.3",
-        "typescript": "catalog:",
-        "typescript-eslint": "8.32.1"
+        "typescript": "catalog:"
     }
 }
