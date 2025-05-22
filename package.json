@@ -27,7 +27,7 @@
         "lint": "turbo lint",
         "lint:fix": "turbo lint:fix",
         "check:boundaries": "turbo boundaries",
-        "prepare": "husky"
+        "prepare": "node .husky/install.mjs"
     },
     "type": "module",
     "devDependencies": {
