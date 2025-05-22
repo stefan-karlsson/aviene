@@ -6,8 +6,11 @@ settings:
 
 catalogs:
   default:
+    eslint:
+      specifier: ^9.27
+      version: 9.27.0
     typescript:
-      specifier: '>=5.7'
+      specifier: ^5.7
       version: 5.8.3
 
 importers:
@@ -54,7 +57,7 @@ importers:
         specifier: 6.4.0
         version: 6.4.0
       eslint:
-        specifier: 9.27.0
+        specifier: 'catalog:'
         version: 9.27.0(jiti@2.4.2)
       globals:
         specifier: 16.1.0
@@ -68,6 +71,9 @@ importers:
       '@workspace/eslint-config':
         specifier: workspace:*
         version: link:../../packages/workspace/eslint-config
+      eslint:
+        specifier: 'catalog:'
+        version: 9.27.0(jiti@2.4.2)
 
 packages:
 

@@ -11,6 +11,7 @@
     "lint:fix": "eslint --fix ."
   },
   "devDependencies": {
+    "eslint": "catalog:",
     "@workspace/eslint-config": "workspace:*"
   },
   "packageManager": "pnpm@10.11.0",

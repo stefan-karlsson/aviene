@@ -6,7 +6,8 @@ packages:
 
 # Global catalog
 catalog:
-  typescript: ">=5.7"
+  typescript: ^5.7
+  eslint: ^9.27
 
 nodeVersion: 24.0.2 
 engineStrict: true
