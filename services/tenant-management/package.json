@@ -3,8 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "scripts": {
-    "dev": "node ./src/getTenant.ts"
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "devDependencies": {
+    "@workspace/eslint-config": "workspace:*"
+  },
+  "packageManager": "pnpm@10.11.0",
+  "engines": {
+    "node": ">=24.0.2"
   }
 }

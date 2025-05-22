@@ -1,0 +1,11 @@
+{
+  "name": "@workspace/eslint-config",
+  "version": "1.0.0",
+  "type": "module",
+  "imports": {
+    "#configs/*": "./configs/*"
+  },
+  "exports": {
+    "./node-service": "./presets/node-service.preset.ts"
+  }
+}

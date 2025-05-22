@@ -2,6 +2,7 @@ function getTenant() {
   return "tenant";
 }
 
-export { getTenant };
+interface Tenant {
+}
 
-console.log(getTenant());
+export { getTenant };

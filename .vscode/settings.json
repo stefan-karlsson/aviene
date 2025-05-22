@@ -1,0 +1,7 @@
+{
+    "typescript.tsdk": "./node_modules/typescript/lib", //for using ts from project, not vscode local
+
+    "eslint.debug": true,
+    "eslint.runtime": "node",
+    "eslint.workingDirectories": [{ "mode": "auto" }]
+}

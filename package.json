@@ -1,37 +1,48 @@
 {
-  "name": "aviene",
-  "version": "1.0.0",
-  "private": true,
-  "description": "A modern SaaS architecture playground - exploring infrastructure, services, and applications through practical implementation.",
-  "keywords": [
-    "saas",
-    "modern",
-    "architecture",
-    "playground",
-    "infrastructure",
-    "services",
-    "applications"
-  ],
-  "author": {
-    "name": "Stefan Karlsson",
-    "email": "iam@stefan-karlsson.se",
-    "url": "https://github.com/stefan-karlsson"
-  },
-  "license": "LGPL-3.0-or-later",
-  "packageManager": "pnpm@10.11.0",
-  "engines": {
-    "node": ">=24.0.2"
-  },
-  "scripts": {
-    "adr:new": "log4brains adr new",
-    "prepare": "husky"
-  },
-  "type": "module",
-  "devDependencies": {
-    "@commitlint/cli": "19.8.1",
-    "@commitlint/config-conventional": "19.8.1",
-    "husky": "9.1.7",
-    "log4brains": "^1.1.0",
-    "typescript": "catalog:"
-  }
+    "name": "aviene",
+    "version": "1.0.0",
+    "private": true,
+    "description": "A modern SaaS architecture playground - exploring infrastructure, services, and applications through practical implementation.",
+    "keywords": [
+        "saas",
+        "modern",
+        "architecture",
+        "playground",
+        "infrastructure",
+        "services",
+        "applications"
+    ],
+    "author": {
+        "name": "Stefan Karlsson",
+        "email": "iam@stefan-karlsson.se",
+        "url": "https://github.com/stefan-karlsson"
+    },
+    "license": "LGPL-3.0-or-later",
+    "packageManager": "pnpm@10.11.0",
+    "engines": {
+        "node": ">=24.0.2"
+    },
+    "scripts": {
+        "adr:new": "log4brains adr new",
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "prepare": "husky"
+    },
+    "type": "module",
+    "devDependencies": {
+        "@commitlint/cli": "19.8.1",
+        "@commitlint/config-conventional": "19.8.1",
+        "@eslint/css": "0.8.1",
+        "@eslint/js": "9.27.0",
+        "@eslint/json": "0.12.0",
+        "@eslint/markdown": "6.4.0",
+        "eslint": "9.27.0",
+        "globals": "16.1.0",
+        "husky": "9.1.7",
+        "log4brains": "^1.1.0",
+        "prettier": "3.5.3",
+        "typescript": "catalog:",
+        "typescript-eslint": "8.32.1",
+        "lint-staged": "16.0.0"
+    }
 }
