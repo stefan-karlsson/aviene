@@ -27,4 +27,4 @@ jobs:
           pnpm install --frozen-lockfile --dev
 
       - name: Perform linting
-        run: pnpm exec eslint --exit-on-fatal-error 
+        run: pnpm lint -- --exit-on-fatal-error 
