@@ -1,0 +1,29 @@
+{
+  "name": "@aviene/{{name}}",
+  "version": "1.0.0",
+  "author": "Stefan Karlsson <iam@stefan-karlsson.se>",
+  "license": "AGPL-3.0-only",
+  "repository": "stefan-karlsson/aviene",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.11.0",
+  "engines": {
+    "node": ">=24.0.2"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "devDependencies": {
+    "@workspace/eslint-config": "workspace:*",
+    "eslint": "catalog:"
+  },
+  "sideEffects": false
+}

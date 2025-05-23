@@ -27,12 +27,15 @@
         "lint": "turbo lint",
         "lint:fix": "turbo lint:fix",
         "check:boundaries": "turbo boundaries",
+        "new:service": "turbo gen service",
+        "new:package": "turbo gen package",
         "prepare": "node .husky/install.mjs"
     },
     "type": "module",
     "devDependencies": {
         "@commitlint/cli": "19.8.1",
         "@commitlint/config-conventional": "19.8.1",
+        "@turbo/gen": "2.5.3",
         "husky": "9.1.7",
         "lint-staged": "16.0.0",
         "log4brains": "^1.1.0",
