@@ -1,11 +1,19 @@
 {
   "$schema": "https://turborepo.com/schema.json",
   "tasks": {
+     "build": {
+      "inputs": ["$TURBO_DEFAULT$"],
+      "outputs": ["dist/**"],
+      "dependsOn": ["^build"]
+    },
     "check:types": {
       "dependsOn": ["^check:types"]
     },
     "lint": {
       "dependsOn": ["^lint"]
+    },
+    "ci:publish": {
+      "cache": false
     }
   }
 }

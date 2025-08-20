@@ -7,9 +7,13 @@
   "packageManager": "pnpm@10.9.0",
   "scripts": {
     "lint": "turbo run lint",
-    "check:types": "turbo run check:types"
+    "build": "turbo run build",
+    "build:packages": "turbo run build --parallel --filter='./packages/**'",
+    "check:types": "turbo run check:types",
+    "ci:publish": "pnpm build:packages && pnpm changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.6",
     "turbo": "^2.5.6"
   }
 }

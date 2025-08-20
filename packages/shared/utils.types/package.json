@@ -6,9 +6,11 @@
   "license": "AGPL-3.0-or-later",
   "type": "module",
   "scripts": {
+    "build": "tsc --emitDeclarationOnly --declaration",
     "check:types": "tsc ./src/* --noEmit",
-    "lint": "eslint \"src/**/*.ts\""
+    "lint": "eslint ."
   },
+  "sideEffects": false,
   "exports": {
     ".": "./src/index.ts"
   },
@@ -17,5 +19,24 @@
     "@aviene/typescript.config": "workspace:*",
     "eslint": "catalog:",
     "typescript": "catalog:"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefan-karlsson/aviene.git",
+    "directory": "packages/shared/utils.types"
+  },
+  "bugs": {
+    "url": "https://github.com/stefan-karlsson/aviene/issues"
+  },
+   "keywords": [
+    "utilities",
+    "types"
+  ],
+  "homepage": "https://github.com/stefan-karlsson/aviene",
+  "files": [
+    "dist/**"
+  ]
 }
