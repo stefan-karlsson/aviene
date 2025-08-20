@@ -15,10 +15,6 @@
 
     "isolatedModules": true,
 
-    /*
-    Disabling checkJs to avoid errors when importing Node.js modules in @aviene/eslint.config.
-    This is a TEMPORARY workaround until we know the reason behind the ts error.
-    */
     "checkJs": false,
 
     "esModuleInterop": true,
