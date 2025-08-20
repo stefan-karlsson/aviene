@@ -4,4 +4,4 @@
 "@aviene/utils.types": patch
 ---
 
-Initial release
+Initial release to test publishing workflow
