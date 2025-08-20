@@ -6,7 +6,7 @@
   "license": "MIT",
   "type": "module",
   "exports": {
-    "./base": "./src/base.mjs"
+    "./base": "./src/base.js"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
@@ -15,6 +15,6 @@
     "eslint-config-turbo": "^2.5.6",
     "typescript": "catalog:",
     "typescript-eslint": "^8.40.0",
-    "@types/node": "^24.3.0"
+    "@types/node": "catalog:"
   }
 }

@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "check:types": "tsc ./src/* --noEmit",
-    "lint": "eslint ."
+    "lint": "eslint \"src/**/*.ts\""
   },
   "exports": {
     ".": "./src/index.ts"

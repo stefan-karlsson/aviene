@@ -10,6 +10,11 @@ import stylistic from '@stylistic/eslint-plugin';
 import turboConfig from "eslint-config-turbo/flat";
 import tseslint from 'typescript-eslint';
 
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 /**
  * Shared ESLint configuration for the workspace.
  */
@@ -34,7 +39,7 @@ export default tseslint.config(
       parserOptions: {
         sourceType: 'module',
         projectService: true,
-        tsconfigRootDir: import.meta.dirname,
+        tsconfigRootDir: __dirname,
       },
     },
   },
