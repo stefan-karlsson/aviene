@@ -36,8 +36,29 @@ importers:
         specifier: ^2.5.6
         version: 2.5.6
 
+  packages/server/exceptions:
+    devDependencies:
+      '@aviene/eslint.config':
+        specifier: workspace:*
+        version: link:../../shared/eslint.config
+      '@aviene/typescript.config':
+        specifier: workspace:*
+        version: link:../../shared/typescript.config
+      '@types/node':
+        specifier: 'catalog:'
+        version: 24.3.0
+      eslint:
+        specifier: 'catalog:'
+        version: 9.33.0(jiti@2.5.1)
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.2
+
   packages/shared/eslint.config:
     devDependencies:
+      '@aviene/typescript.config':
+        specifier: workspace:*
+        version: link:../typescript.config
       '@eslint/js':
         specifier: ^9.33.0
         version: 9.33.0
@@ -60,11 +81,7 @@ importers:
         specifier: ^8.40.0
         version: 8.40.0(eslint@9.33.0(jiti@2.5.1))(typescript@5.9.2)
 
-  packages/shared/typescript.config:
-    devDependencies:
-      typescript:
-        specifier: 'catalog:'
-        version: 5.9.2
+  packages/shared/typescript.config: {}
 
   packages/shared/utils.types:
     devDependencies:

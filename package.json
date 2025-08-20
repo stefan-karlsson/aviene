@@ -5,6 +5,7 @@
   "author": "Stefan Karlsson",
   "license": "AGPL-3.0-or-later",
   "packageManager": "pnpm@10.9.0",
+  "type": "module",
   "scripts": {
     "lint": "turbo run lint",
     "build": "turbo run build",
@@ -16,9 +17,9 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.6",
-    "turbo": "^2.5.6",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
+    "turbo": "^2.5.6",
     "husky": "^9.1.7"
   }
 }

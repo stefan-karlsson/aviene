@@ -1,7 +1,7 @@
 {
-  "name": "@aviene/utils.types",
-  "version": "0.0.1",
-  "description": "A collection of shared TypeScript utility types",
+  "name": "@aviene/exceptions",
+  "version": "0.0.0",
+  "description": "Commonly used exceptions",
   "author": "Stefan Karlsson",
   "license": "AGPL-3.0-or-later",
   "type": "module",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@aviene/eslint.config": "workspace:*",
     "@aviene/typescript.config": "workspace:*",
+    "@types/node": "catalog:",
     "eslint": "catalog:",
     "typescript": "catalog:"
   },
@@ -26,14 +27,14 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stefan-karlsson/aviene.git",
-    "directory": "packages/shared/utils.types"
+    "directory": "packages/shared/exceptions"
   },
   "bugs": {
     "url": "https://github.com/stefan-karlsson/aviene/issues"
   },
   "keywords": [
-    "utilities",
-    "types"
+    "exceptions",
+    "errors"
   ],
   "homepage": "https://github.com/stefan-karlsson/aviene",
   "files": [

@@ -6,8 +6,6 @@
   "license": "MIT",
   "type": "module",
   "exports": {
-    "./node-ts": "./src/node-ts.json",
-    "./node24": "./src/node24.json",
-    "./strictest": "./src/strictest.json"
+    "./*": "./src/*"
   }
 }

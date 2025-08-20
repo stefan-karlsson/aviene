@@ -42,5 +42,8 @@ export default tseslint.config(
         tsconfigRootDir: __dirname,
       },
     },
+    rules: {
+      "@typescript-eslint/explicit-function-return-type": "error"
+    }
   },
 )
