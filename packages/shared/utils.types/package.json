@@ -1,6 +1,6 @@
 {
   "name": "@aviene/utils.types",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A collection of shared TypeScript utility types",
   "author": "Stefan Karlsson",
   "license": "AGPL-3.0-or-later",
@@ -23,7 +23,7 @@
   "publishConfig": {
     "access": "public"
   },
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/stefan-karlsson/aviene.git",
     "directory": "packages/shared/utils.types"
@@ -31,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/stefan-karlsson/aviene/issues"
   },
-   "keywords": [
+  "keywords": [
     "utilities",
     "types"
   ],
