@@ -9,6 +9,7 @@
     "lint": "turbo run lint",
     "build": "turbo run build",
     "build:packages": "turbo run build --parallel --filter='./packages/**'",
+    "test": "turbo run test",
     "check:types": "turbo run check:types",
     "ci:publish": "pnpm build:packages && pnpm changeset publish"
   },
