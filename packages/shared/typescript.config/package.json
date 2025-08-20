@@ -1,0 +1,16 @@
+{
+  "name": "@aviene/typescript.config",
+  "version": "0.0.0",
+  "description": "Typescript configs",
+  "author": "Stefan Karlsson",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./node-ts": "./src/node-ts.json",
+    "./node24": "./src/node24.json",
+    "./strictest": "./src/strictest.json"
+  },
+  "devDependencies": {
+    "typescript": "catalog:"
+  }
+}

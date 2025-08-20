@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "@aviene/typescript.config/strictest",
+    "@aviene/typescript.config/node24",
+    "@aviene/typescript.config/node-ts"
+  ],
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": ["src", "eslint.config.js"],
+  "exclude": ["node_modules", "dist"]
+}

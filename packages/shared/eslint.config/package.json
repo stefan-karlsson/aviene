@@ -1,0 +1,20 @@
+{
+  "name": "@aviene/eslint.config",
+  "version": "0.0.0",
+  "description": "Collection of ESLint configuration",
+  "author": "Stefan Karlsson",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./base": "./src/base.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@stylistic/eslint-plugin": "^5.2.3",
+    "eslint": "catalog:",
+    "eslint-config-turbo": "^2.5.6",
+    "typescript": "catalog:",
+    "typescript-eslint": "^8.40.0",
+    "@types/node": "^24.3.0"
+  }
+}

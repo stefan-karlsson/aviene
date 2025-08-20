@@ -6,9 +6,16 @@
   "license": "AGPL-3.0-or-later",
   "type": "module",
   "scripts": {
-    "check:types": "tsc ./src/* --noEmit"
+    "check:types": "tsc ./src/* --noEmit",
+    "lint": "eslint ."
   },
   "exports": {
     ".": "./src/index.ts"
+  },
+  "devDependencies": {
+    "@aviene/eslint.config": "workspace:*",
+    "@aviene/typescript.config": "workspace:*",
+    "eslint": "catalog:",
+    "typescript": "catalog:"
   }
 }
