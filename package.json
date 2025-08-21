@@ -22,6 +22,8 @@
     "@commitlint/cli": "19",
     "@commitlint/config-conventional": "19",
     "prettier": "latest",
+    "lint-staged": "16",
+    "eslint": "catalog:",
     "turbo": "latest",
     "husky": "9"
   }
