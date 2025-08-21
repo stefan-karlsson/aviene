@@ -1,4 +1,4 @@
-import base from "@aviene/eslint.config/base";
+import base from '@aviene/eslint.config/base';
 
 export default [
   ...base,

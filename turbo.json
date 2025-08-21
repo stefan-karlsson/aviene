@@ -1,7 +1,7 @@
 {
   "$schema": "https://turborepo.com/schema.json",
   "tasks": {
-     "build": {
+    "build": {
       "inputs": ["$TURBO_DEFAULT$"],
       "outputs": ["dist/**"],
       "dependsOn": ["^build"]

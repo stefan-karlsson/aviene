@@ -39,8 +39,8 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          commit: "chore: update package versions"
-          title: "chore: update package versions"
+          commit: 'chore: update package versions'
+          title: 'chore: update package versions'
           publish: pnpm ci:publish
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

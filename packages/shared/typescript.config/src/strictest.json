@@ -20,5 +20,5 @@
 
     "esModuleInterop": true,
     "skipLibCheck": true
-  },
+  }
 }

@@ -49,11 +49,7 @@ export abstract class ExceptionBase extends Error {
    * as exception data may be logged or exposed. Only include non-sensitive
    * information that aids debugging.
    */
-  constructor(
-    message: string,
-    cause?: Error,
-    metadata?: unknown,
-  ) {
+  constructor(message: string, cause?: Error, metadata?: unknown) {
     super(message);
 
     this._message = message;
@@ -82,7 +78,7 @@ export abstract class ExceptionBase extends Error {
       stack: this.stack,
       correlationId: this.correlationId,
       cause: JSON.stringify(this._cause),
-      metadata: this._metadata
+      metadata: this._metadata,
     };
   }
 }

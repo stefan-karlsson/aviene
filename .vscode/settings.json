@@ -1,31 +1,45 @@
 {
-  // Code formatting
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Format on save is disabled globally; enable it explicitly per file type as needed
   "editor.formatOnSave": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+  "[javascript][typescript][typescriptreact][javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "vscode.json-language-features",
     "editor.formatOnSave": true
   },
-
-  // Code linting
   "eslint.workingDirectories": [
-    { "pattern": "apps/browser/*" },
-    { "pattern": "apps/server/*" },
-    { "pattern": "packages/server/*" },
-    { "pattern": "packages/browser/*" },
-    { "pattern": "packages/shared/*" },
-    { "pattern": "packages/workspace/*" }
+    {
+      "pattern": "apps/browser/*"
+    },
+    {
+      "pattern": "apps/server/*"
+    },
+    {
+      "pattern": "packages/server/*"
+    },
+    {
+      "pattern": "packages/browser/*"
+    },
+    {
+      "pattern": "packages/shared/*"
+    },
+    {
+      "pattern": "packages/workspace/*"
+    }
   ],
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact"
-  ],
+  ]
 }

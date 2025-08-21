@@ -16,4 +16,7 @@
  * along with this program. If not, see https://www.gnu.org/licenses/.
  */
 
-export type GenericRecord<K extends PropertyKey = PropertyKey, V = unknown> = Record<K, V>;
+export type GenericRecord<
+  K extends PropertyKey = PropertyKey,
+  V = unknown,
+> = Record<K, V>;

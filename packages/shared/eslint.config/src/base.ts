@@ -7,7 +7,8 @@
 
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
-import turboConfig from "eslint-config-turbo/flat";
+import turboConfig from 'eslint-config-turbo/flat';
+import prettierConfig from 'eslint-config-prettier';
 import tseslint from 'typescript-eslint';
 
 import { dirname } from 'node:path';
@@ -20,7 +21,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
  */
 export default tseslint.config(
   {
-    ignores: ["dist/**"],
+    ignores: ['dist/**'],
     plugins: {
       '@stylistic': stylistic,
     },
@@ -28,7 +29,7 @@ export default tseslint.config(
   turboConfig,
   {
     rules: {
-      "turbo/no-undeclared-env-vars": "warn",
+      'turbo/no-undeclared-env-vars': 'warn',
     },
   },
   eslint.configs.recommended,
@@ -43,7 +44,8 @@ export default tseslint.config(
       },
     },
     rules: {
-      "@typescript-eslint/explicit-function-return-type": "error"
-    }
+      '@typescript-eslint/explicit-function-return-type': 'error',
+    },
   },
-)
+  prettierConfig,
+);
