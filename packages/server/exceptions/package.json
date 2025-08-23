@@ -8,7 +8,8 @@
   "scripts": {
     "build": "tsc --emitDeclarationOnly --declaration",
     "check:types": "tsc ./src/* --noEmit",
-    "lint": "eslint ./src/*"
+    "lint": "eslint ./src/*",
+    "test": "node --test ./tests/*"
   },
   "sideEffects": false,
   "exports": {

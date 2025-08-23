@@ -1,4 +1,7 @@
 {
+  "aws.telemetry": false,
+  "redhat.telemetry.enabled": false,
+  "telemetry.feedback.enabled": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   // Format on save is disabled globally; enable it explicitly per file type as needed
   "editor.formatOnSave": false,
