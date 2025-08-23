@@ -3,6 +3,18 @@
   "redhat.telemetry.enabled": false,
   "telemetry.feedback.enabled": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "file": ".github/instructions/commit-message.instructions.md"
+    }
+  ],
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+  },
+  "chat.promptFilesLocations": {
+    ".github/prompts": true
+  },
   // Format on save is disabled globally; enable it explicitly per file type as needed
   "editor.formatOnSave": false,
   // Enable ESLint to format
