@@ -87,7 +87,7 @@
     - `downgrade`: ⬇️ Downgrade changes
     - `patch`: 🩹 Patch changes
     - `optimize`: 🛠️ Optimize changes
-  - `scope`: The scope of the change (e.g., component or file name). Include this if the change is specific to a particular part of the codebase.
+  - `scope`: The scope of the change (e.g., package name, file name or component name). Include this if the change is specific to a particular part of the codebase.
 - `short description`: A brief summary of the change.
 - The long description should provide additional context and details about the change.
   - Explain why the change was made.
