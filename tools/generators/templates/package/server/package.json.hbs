@@ -1,0 +1,13 @@
+{ "name": "@aviene/{{lowerCase:name}}", "version": "0.0.0", "description": "{{description}}",
+"author": "Stefan Karlsson", "license": "AGPL-3.0-or-later", "type": "module",
+"scripts": { "build": "tsc --emitDeclarationOnly --declaration", "check:types":
+"tsc ./src/* --noEmit", "lint": "eslint ./src/*", "test": "node --test
+./tests/*" }, "sideEffects": false, "exports": { ".": "./src/index.ts" },
+"devDependencies": { "@aviene/eslint.config": "workspace:*",
+"@aviene/typescript.config": "workspace:*", "@types/node": "catalog:", "eslint":
+"catalog:", "typescript": "catalog:" }, "publishConfig": { "access": "public" },
+"repository": { "type": "git", "url":
+"git+https://github.com/stefan-karlsson/aviene.git", "directory": "packages/{{type}}/{{name}}"
+}, "bugs": { "url": "https://github.com/stefan-karlsson/aviene/issues" },
+"keywords": [ "exceptions", "errors" ], "homepage":
+"https://github.com/stefan-karlsson/aviene", "files": [ "dist/**" ] }
