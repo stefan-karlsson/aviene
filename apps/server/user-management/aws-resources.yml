@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aws/serverless-application-model/main/samtranslator/schema/schema.json
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: >-
+  user-management
+
+Transform:
+  - AWS::Serverless-2016-10-31
+
+Globals:
+  Function:
+    Timeout: 3
+    MemorySize: 128
+    Runtime: nodejs22.x
+    Tracing: Active
+    Architectures:
+      - x86_64
+    LoggingConfig:
+      LogFormat: JSON
+
+Resources:
+  CreateUser:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/infra/aws/
+      Handler: create-user.lambdaHandler
+      Description: A Lambda function that returns a static string.
+      Policies:
+        - AWSLambdaBasicExecutionRole
+      Events:
+        CreateUserEndpoint:
+          Type: HttpApi
+          Properties:
+            Path: /users
+            Method: POST
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        # External:
+        #   -
+        Minify: false
+        Target: 'es2023'
+        Sourcemap: false
+        Format: esm
+        OutExtension:
+          - .js=.mjs
+        EntryPoints:
+          - create-user.ts
+
+Outputs:
+  CreateUserArn:
+    Description: Create User Function
+    Value: !GetAtt CreateUser.Arn
+    Export:
+      Name: !Sub '${AWS::StackName}-CreateUserArn'

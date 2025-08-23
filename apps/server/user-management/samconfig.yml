@@ -1,0 +1,35 @@
+version: 0.1
+
+default:
+  global:
+    parameters:
+      stack_name: user-management
+  build:
+    parameters:
+      cached: true
+      parallel: true
+      template_file: aws-resources.yml
+  validate:
+    parameters:
+      lint: true
+  deploy:
+    parameters:
+      capabilities: CAPABILITY_IAM
+      confirm_changeset: true
+      resolve_s3: true
+      s3_prefix: user-management
+      region: eu-north-1
+      profile: aviene
+      image_repositories: []
+  package:
+    parameters:
+      resolve_s3: true
+  sync:
+    parameters:
+      watch: true
+  local_start_api:
+    parameters:
+      warm_containers: EAGER
+  local_start_lambda:
+    parameters:
+      warm_containers: EAGER
