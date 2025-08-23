@@ -24,6 +24,7 @@
     "eslint": "catalog:",
     "husky": "9",
     "prettier": "latest",
-    "turbo": "latest"
+    "turbo": "latest",
+    "@turbo/gen": "latest"
   }
 }

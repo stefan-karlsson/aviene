@@ -5,7 +5,10 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   // Format on save is disabled globally; enable it explicitly per file type as needed
   "editor.formatOnSave": false,
+  // Enable ESLint to format
+  "eslint.format.enable": true,
   "[javascript][typescript][typescriptreact][javascriptreact]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit"
