@@ -18,7 +18,7 @@ yarn add @aviene/guards
 ### Usage
 
 ```typescript
-import { isEmpty } from '@aviene/guards';
+import { isEmpty } from "@aviene/guards";
 
 if (isEmpty(value)) {
   // handle empty value
