@@ -1,0 +1,44 @@
+{
+  "name": "@aviene/guards",
+  "version": "0.0.0",
+  "description": "Collection of guard utilities",
+  "author": "Stefan Karlsson",
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --emitDeclarationOnly --declaration",
+    "check:types": "tsc --noEmit",
+    "lint": "eslint ./src/*",
+    "test": "node --test ./tests/*"
+  },
+  "sideEffects": false,
+  "imports": {
+    "#root/*": "./src/*"
+  },
+  "exports": {
+    "./isEmpty": "./src/is-empty.util.ts",
+    "./lengthIsBetween": "./src/length.util.ts"
+  },
+  "devDependencies": {
+    "@aviene/eslint.config": "workspace:*",
+    "@aviene/typescript.config": "workspace:*",
+    "eslint": "catalog:",
+    "typescript": "catalog:"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefan-karlsson/aviene.git",
+    "directory": "packages/server/guards"
+  },
+  "bugs": {
+    "url": "https://github.com/stefan-karlsson/aviene/issues"
+  },
+  "keywords": [],
+  "homepage": "https://github.com/stefan-karlsson/aviene",
+  "files": [
+    "dist/**"
+  ]
+}
