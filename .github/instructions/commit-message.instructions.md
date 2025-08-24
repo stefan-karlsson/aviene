@@ -36,7 +36,7 @@
 | **docs**      | 📝   | Documentation only changes                              |
 | **style**     | 💄   | Code style (formatting, whitespace, etc.)               |
 | **refactor**  | ♻️   | Code change that neither fixes a bug nor adds a feature |
-| **perf**      | ⚡️   | Performance improvements                                |
+| **perf**      | ⚡️  | Performance improvements                                |
 | **test**      | ✅   | Adding or updating tests                                |
 | **chore**     | 🔧   | Build process or auxiliary tools                        |
 | **ci**        | 👷   | Continuous integration changes                          |
@@ -45,12 +45,12 @@
 | **wip**       | 🚧   | Work in progress                                        |
 | **security**  | 🔒   | Security improvements                                   |
 | **i18n**      | 🌐    | Internationalization/localization                       |
-| **a11y**      | ♿    | Accessibility improvements                              |
+| **a11y**      | ♿️   | Accessibility improvements                              |
 | **ux**        | 🎨   | User experience improvements                            |
 | **ui**        | 🖌️   | User interface changes                                  |
 | **config**    | 🔧   | Configuration file changes                              |
 | **deps**      | 📦   | Dependency updates                                      |
-| **infra**     | 🌐    | Infrastructure changes                                  |
+| **infra**     | 🧱   | Infrastructure changes                                  |
 | **init**      | 🎉   | Initial commit                                          |
 | **analytics** | 📈   | Analytics or tracking changes                           |
 | **seo**       | 🔍   | SEO improvements                                        |
