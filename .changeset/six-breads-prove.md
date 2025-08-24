@@ -3,4 +3,6 @@
 "@aviene/guards": patch
 ---
 
-dfs
+# Summary
+
+Initial implementation of exception handling and guard clauses.
