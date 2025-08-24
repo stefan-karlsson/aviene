@@ -44,7 +44,7 @@
 | **revert**    | ⏪   | Reverts a previous commit                               |
 | **wip**       | 🚧   | Work in progress                                        |
 | **security**  | 🔒   | Security improvements                                   |
-| **i18n**      | 🌐    | Internationalization/localization                       |
+| **i18n**      | 🌐   | Internationalization/localization                       |
 | **a11y**      | ♿️   | Accessibility improvements                              |
 | **ux**        | 🎨   | User experience improvements                            |
 | **ui**        | 🖌️   | User interface changes                                  |
