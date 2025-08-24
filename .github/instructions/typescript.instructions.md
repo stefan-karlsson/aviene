@@ -30,6 +30,7 @@ applyTo: "**/*.{js,ts,jsx,tsx}"
 - Use generic types for reusable components
 - Prefer type over interface for type aliases
 - Use readonly for immutable properties
+- Use adjective-first naming for types: describe capabilities before the entity (e.g., LengthCheckable, not CheckableLength).
 
 ## Modern JavaScript
 
@@ -47,6 +48,7 @@ applyTo: "**/*.{js,ts,jsx,tsx}"
 - Use default parameters instead of checking for undefined
 - Use rest parameters instead of arguments object
 - Return early to reduce nesting
+- Prefer passing single object with named properties
 
 ## Error Handling
 
