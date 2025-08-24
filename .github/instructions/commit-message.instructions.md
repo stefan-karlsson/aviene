@@ -94,6 +94,7 @@
   - Describe what is being used and why.
   - Include any relevant information that might be useful for understanding the change in the future.
   - Reference any related issues or pull requests at the end of the long description.
+- The body's lines must not be longer than 100 characters, use line breaks to separate them.
 - If the commit fixes an issue or task, include `Fixes #<issue-number>` or `Closes #<issue-number>` at the end of the long description.
 - If the commit introduces a breaking change, include `BREAKING CHANGE: <description of the breaking change>` at the end of the long description.
 
