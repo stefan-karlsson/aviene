@@ -5,8 +5,14 @@
     "@aviene/typescript.config/node-ts.json"
   ],
   "compilerOptions": {
+    "rootDir": ".",
     "outDir": "dist"
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
