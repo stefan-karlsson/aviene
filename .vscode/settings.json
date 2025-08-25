@@ -1,7 +1,4 @@
 {
-  "aws.telemetry": false,
-  "redhat.telemetry.enabled": false,
-  "telemetry.feedback.enabled": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "github.copilot.chat.codeGeneration.useInstructionFiles": true,
   "github.copilot.chat.commitMessageGeneration.instructions": [
@@ -15,6 +12,9 @@
   "chat.promptFilesLocations": {
     ".github/prompts": true
   },
+  "chat.modeFilesLocations": {
+    ".github/chatmodes": true
+  },
   // Format on save is disabled globally; enable it explicitly per file type as needed
   "editor.formatOnSave": false,
   // Enable ESLint to format
@@ -23,7 +23,7 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit"
+      "source.fixAll.eslint": "always"
     }
   },
   "[json][jsonc]": {
@@ -32,19 +32,19 @@
   },
   "eslint.workingDirectories": [
     {
-      "pattern": "apps/browser/*"
+      "pattern": "apps/browser/**/*"
     },
     {
-      "pattern": "apps/server/*"
+      "pattern": "apps/server/**/*"
     },
     {
-      "pattern": "packages/server/*"
+      "pattern": "packages/server/**/*"
     },
     {
-      "pattern": "packages/browser/*"
+      "pattern": "packages/browser/**/*"
     },
     {
-      "pattern": "packages/shared/*"
+      "pattern": "packages/shared/**/*"
     }
   ],
   "eslint.validate": [
@@ -52,9 +52,5 @@
     "javascriptreact",
     "typescript",
     "typescriptreact"
-  ],
-  "yaml.schemas": {
-    "file:///home/stefan/.vscode/extensions/atlassian.atlascode-3.8.10/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml",
-    "https://raw.githubusercontent.com/aws/serverless-application-model/main/samtranslator/schema/schema.json": "file:///home/stefan/dev/repos/stefan-karlsson/aviene/apps/server/user-management/aws-resources.yaml"
-  }
+  ]
 }
