@@ -16,7 +16,7 @@
 
     "isolatedModules": true,
 
-    "checkJs": false,
+    "checkJs": true,
 
     "esModuleInterop": true,
     "skipLibCheck": true

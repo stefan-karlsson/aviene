@@ -43,6 +43,62 @@ export default tseslint.config(
         tsconfigRootDir: __dirname,
       },
     },
+    rules: {
+      eqeqeq: ['error', 'always'],
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      '@typescript-eslint/no-floating-promises': 'error',
+      '@typescript-eslint/no-misused-promises': [
+        'error',
+        { checksVoidReturn: false },
+      ],
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        { prefer: 'type-imports' },
+      ],
+      '@typescript-eslint/restrict-template-expressions': [
+        'error',
+        { allowNumber: true, allowBoolean: true },
+      ],
+      '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
+      '@typescript-eslint/switch-exhaustiveness-check': 'error',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/member-ordering': [
+        'error',
+        {
+          default: [
+            // Index signatures
+            'signature',
+
+            // Static fields
+            'public-static-field',
+            'protected-static-field',
+            'private-static-field',
+
+            // Instance fields
+            'public-instance-field',
+            'protected-instance-field',
+            'private-instance-field',
+
+            // Constructors
+            'constructor',
+
+            // Static methods
+            'public-static-method',
+            'protected-static-method',
+            'private-static-method',
+
+            // Instance methods
+            'public-instance-method',
+            'protected-instance-method',
+            'private-instance-method',
+          ],
+        },
+      ],
+    },
   },
   prettierConfig,
+  {
+    files: ['**/*.js'],
+    extends: [tseslint.configs.disableTypeChecked],
+  },
 );

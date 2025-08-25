@@ -1,6 +1,8 @@
 packages:
+  - 'packages/browser/*'
   - 'packages/shared/*'
   - 'packages/server/*'
+  - 'apps/browser/*'
   - 'apps/server/*'
 
 catalog:
