@@ -31,6 +31,7 @@ applyTo: "**/*.{js,ts,jsx,tsx}"
 - Prefer type over interface for type aliases
 - Use readonly for immutable properties
 - Use adjective-first naming for types: describe capabilities before the entity (e.g., LengthCheckable, not CheckableLength).
+- Omit explicit return types for functions and methods when TypeScript can infer them
 
 ## Modern JavaScript
 
