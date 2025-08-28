@@ -25,7 +25,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI) {
       const name = String(data.name);
 
       const dest = path.join(root, 'packages', env, name);
-      const source = path.join(workspace, 'templates', 'package', env);
+      const source = path.join(workspace, 'templates', 'package');
 
       const actions: PlopTypes.ActionType[] = [
         {

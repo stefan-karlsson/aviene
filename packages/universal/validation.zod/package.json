@@ -1,0 +1,44 @@
+{
+  "name": "@aviene/validation.zod",
+  "version": "0.0.0",
+  "description": "Wrapper around Zod, a TypeScript-first schema validation with static type inference library",
+  "author": "Stefan Karlsson",
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --emitDeclarationOnly --declaration",
+    "check:types": "tsc --noEmit",
+    "lint": "eslint ./src/*",
+    "test": "node --test ./tests/*"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "peerDependencies": {
+    "zod": "4.x"
+  },
+  "devDependencies": {
+    "zod": "^4.1.1",
+    "@aviene/eslint.config": "workspace:*",
+    "@aviene/typescript.config": "workspace:*",
+    "eslint": "catalog:",
+    "typescript": "catalog:"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefan-karlsson/aviene.git",
+    "directory": "packages/universal/validation.zod"
+  },
+  "bugs": {
+    "url": "https://github.com/stefan-karlsson/aviene/issues"
+  },
+  "keywords": [],
+  "homepage": "https://github.com/stefan-karlsson/aviene",
+  "files": [
+    "dist/**"
+  ]
+}

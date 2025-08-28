@@ -29,6 +29,8 @@ export interface SerializedException {
  * correlation IDs, causes, and metadata.
  */
 export abstract class ExceptionBase extends Error {
+  readonly correlationId!: string; // TODO: Needs to be implemented
+
   private readonly _message: string;
   private readonly _cause: Error | undefined;
   private readonly _metadata?: unknown;
@@ -37,7 +39,6 @@ export abstract class ExceptionBase extends Error {
   abstract code: string;
 
   /** Unique identifier for correlating logs and tracing requests. */
-  public readonly correlationId!: string; // TODO: Needs to be implemented
 
   /**
    * Constructs a new ExceptionBase.

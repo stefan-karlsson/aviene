@@ -1,4 +1,4 @@
-# @aviene/utils.types
+# @aviene/contracts
 
 ## 0.0.1
 

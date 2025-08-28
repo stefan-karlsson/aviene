@@ -15,3 +15,10 @@ Below is a list with coding instructions for various programming languages.
 ## Markdown Content Rules
 
 You can find the markdown content rules for this workspace in the [Markdown Instructions](./copilot-instructions.md).
+
+## Library format
+
+```
+@scope/<domain>             <-- domain-agnostic contract or interface
+@scope/<domain>.<impl>      <-- implementation of that domain
+```

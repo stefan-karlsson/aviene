@@ -2,6 +2,7 @@ packages:
   - 'packages/browser/*'
   - 'packages/shared/*'
   - 'packages/server/*'
+  - 'packages/universal/*'
   - 'apps/browser/*'
   - 'apps/server/*'
 
@@ -11,3 +12,4 @@ catalog:
   typescript: 5.9.2
   eslint: 9.33.0
   esbuild: 0.25.9
+  tsx: 4.20.5

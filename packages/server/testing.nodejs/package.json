@@ -1,0 +1,46 @@
+{
+  "name": "@aviene/testing.nodejs",
+  "version": "0.0.0",
+  "description": "Testing helpers",
+  "author": "Stefan Karlsson",
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --emitDeclarationOnly --declaration",
+    "check:types": "tsc --noEmit",
+    "lint": "eslint ./src/*",
+    "test": "node --test ./tests/*"
+  },
+  "sideEffects": false,
+  "imports": {
+    "#root/*": "./src/*.ts"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./types": "./src/types.ts"
+  },
+  "devDependencies": {
+    "@aviene/contracts": "workspace:*",
+    "@aviene/eslint.config": "workspace:*",
+    "@aviene/typescript.config": "workspace:*",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "typescript": "catalog:"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefan-karlsson/aviene.git",
+    "directory": "packages/server/testing.nodejs"
+  },
+  "bugs": {
+    "url": "https://github.com/stefan-karlsson/aviene/issues"
+  },
+  "keywords": [],
+  "homepage": "https://github.com/stefan-karlsson/aviene",
+  "files": [
+    "dist/**"
+  ]
+}

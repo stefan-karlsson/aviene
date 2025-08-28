@@ -1,0 +1,47 @@
+{
+  "name": "@aviene/contracts.runtime",
+  "version": "0.0.0",
+  "description": "Commonly used contracts at runtime",
+  "author": "Stefan Karlsson",
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --emitDeclarationOnly --declaration",
+    "check:types": "tsc --noEmit",
+    "lint": "eslint ./src/*"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./type-guards/*": "./src/type-guards/*.ts"
+  },
+  "dependencies": {
+    "@aviene/contracts": "workspace:*"
+  },
+  "devDependencies": {
+    "@aviene/eslint.config": "workspace:*",
+    "@aviene/typescript.config": "workspace:*",
+    "eslint": "catalog:",
+    "typescript": "catalog:"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefan-karlsson/aviene.git",
+    "directory": "packages/shared/contracts.runtime"
+  },
+  "bugs": {
+    "url": "https://github.com/stefan-karlsson/aviene/issues"
+  },
+  "keywords": [
+    "type-guards",
+    "contracts",
+    "runtime"
+  ],
+  "homepage": "https://github.com/stefan-karlsson/aviene",
+  "files": [
+    "dist/**"
+  ]
+}

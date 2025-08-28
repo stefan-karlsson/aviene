@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug test",
+      "type": "node",
+      "request": "launch",
+      "args": ["--import", "tsx", "--test", "${fileBasenameNoExtension}.ts"],
+      "console": "integratedTerminal",
+      "cwd": "${fileDirname}/"
+    },
+    {
+      "name": "Debug test by text",
+      "type": "node",
+      "request": "launch",
+      "args": [
+        "--import",
+        "tsx",
+        "--test",
+        "${fileBasenameNoExtension}.ts",
+        "--test-name-pattern=\"${selectedText}\""
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${fileDirname}/"
+    }
+  ]
+}

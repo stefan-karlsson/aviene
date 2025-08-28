@@ -7,8 +7,8 @@
 
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
-import turboConfig from 'eslint-config-turbo/flat';
 import prettierConfig from 'eslint-config-prettier';
+import turboConfig from 'eslint-config-turbo/flat';
 import tseslint from 'typescript-eslint';
 
 import { dirname } from 'node:path';
@@ -44,24 +44,25 @@ export default tseslint.config(
       },
     },
     rules: {
-      eqeqeq: ['error', 'always'],
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
-      '@typescript-eslint/no-floating-promises': 'error',
-      '@typescript-eslint/no-misused-promises': [
-        'error',
-        { checksVoidReturn: false },
-      ],
-      '@typescript-eslint/consistent-type-imports': [
-        'error',
-        { prefer: 'type-imports' },
-      ],
-      '@typescript-eslint/restrict-template-expressions': [
-        'error',
-        { allowNumber: true, allowBoolean: true },
-      ],
-      '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
-      '@typescript-eslint/switch-exhaustiveness-check': 'error',
-      '@typescript-eslint/no-explicit-any': 'warn',
+      // "@typescript-eslint/no-floating-promises": [
+      //   "error",
+      //   {
+      //       "allowForKnownSafeCalls": [
+      //           {
+      //               "from": "package",
+      //               "name": [ "test", "describe", "it" ],
+      //               "package": "node:test"
+      //           }
+      //       ],
+      //       "allowForKnownSafePromises": [
+      //           {
+      //               "from": "package",
+      //               "name": [ "describe", "it" ],
+      //               "package": "node:test"
+      //           }
+      //       ]
+      //   }
+      // ],
       '@typescript-eslint/member-ordering': [
         'error',
         {

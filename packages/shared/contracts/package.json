@@ -1,0 +1,48 @@
+{
+  "name": "@aviene/contracts",
+  "version": "0.0.1",
+  "description": "Commonly used contracts",
+  "author": "Stefan Karlsson",
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --emitDeclarationOnly --declaration",
+    "check:types": "tsc --noEmit",
+    "lint": "eslint ./src/*"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./GenericRecord": "./src/base/GenericRecord.ts",
+    "./ObjectLiteral": "./src/base/ObjectLiteral.ts",
+    "./Primitive": "./src/base/Primitive.ts",
+    "./JsonValue": "./src/base/JsonValue.ts",
+    "./JsonSerializable": "./src/base/JsonSerializable.ts",
+    "./UnknownFunction": "./src/base/UnknownFunction.ts"
+  },
+  "devDependencies": {
+    "@aviene/eslint.config": "workspace:*",
+    "@aviene/typescript.config": "workspace:*",
+    "eslint": "catalog:",
+    "typescript": "catalog:"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefan-karlsson/aviene.git",
+    "directory": "packages/shared/contracts"
+  },
+  "bugs": {
+    "url": "https://github.com/stefan-karlsson/aviene/issues"
+  },
+  "keywords": [
+    "utilities",
+    "types"
+  ],
+  "homepage": "https://github.com/stefan-karlsson/aviene",
+  "files": [
+    "dist/**"
+  ]
+}

@@ -4,8 +4,8 @@ import {
   ARGUMENT_NOT_PROVIDED,
   ARGUMENT_OUT_OF_RANGE,
   CONFLICT,
-  NOT_FOUND,
   INTERNAL_SERVER_ERROR,
+  NOT_FOUND,
 } from './exception.codes.js';
 
 /**
@@ -57,14 +57,14 @@ export class ConflictException extends ExceptionBase {
 export class NotFoundException extends ExceptionBase {
   static readonly message = 'Not found';
 
+  readonly code = NOT_FOUND;
+
   /**
    * @param message Optional custom error message.
    */
   constructor(message = NotFoundException.message) {
     super(message);
   }
-
-  readonly code = NOT_FOUND;
 }
 
 /**
@@ -76,12 +76,12 @@ export class NotFoundException extends ExceptionBase {
 export class InternalServerErrorException extends ExceptionBase {
   static readonly message = 'Internal server error';
 
+  readonly code = INTERNAL_SERVER_ERROR;
+
   /**
    * @param message Optional custom error message.
    */
   constructor(message = InternalServerErrorException.message) {
     super(message);
   }
-
-  readonly code = INTERNAL_SERVER_ERROR;
 }
